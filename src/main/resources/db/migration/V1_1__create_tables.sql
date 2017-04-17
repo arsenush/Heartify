@@ -52,7 +52,7 @@ CREATE TABLE patient (
 CREATE TABLE location (
   ward_number SMALLINT,
   bed_number SMALLINT NOT NULL,
-  patient_id INT NULL,
+  patient_id INT UNIQUE NULL,
   PRIMARY KEY (ward_number, bed_number),
   FOREIGN KEY (patient_id) REFERENCES patient(id)
 );
@@ -68,8 +68,8 @@ CREATE TABLE prescription (
   final_date DATE NULL,
   appointed_date DATE NOT NULL,
   is_active BIT NOT NULL,
-  nurse_id INT NULL,
+  current_nurse_id INT NULL,
   FOREIGN KEY (patient_id) REFERENCES patient(id),
   FOREIGN KEY (doctor_id) REFERENCES doctor(id),
-  FOREIGN KEY (nurse_id) REFERENCES nurse(id)
+  FOREIGN KEY (current_nurse_id) REFERENCES nurse(id)
 );

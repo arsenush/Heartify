@@ -1,4 +1,4 @@
-package com.hospital;
+package com.heartfy;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
