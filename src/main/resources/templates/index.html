@@ -259,15 +259,9 @@
 												<li><a href="#clients">Clients</a></li>
 												<li><a href="#team">Team</a></li>
 												<li><a href="#contact">Contacts</a></li>
-												<c:choose>
-													<c:when test="${user == null}">
-														<li><a href="login.jsp" class="blue">Log In</a></li>
-													</c:when>
-													<c:otherwise>
-														<li><a href="home" class="green">My Account</a></li>
-														<li><a href="logout" class="red">Log Out</a></li>
-													</c:otherwise>
-												</c:choose>
+												<li><a th:if="${user==null}" href="login" class="blue">Log In</a></li>
+												<li><a th:if="${user!=null}" href="home" class="green">My Acc</a></li>
+												<li><a th:if="${user!=null}" href="logout" class="red">Log Out</a></li>
 											</ul>
 										</div>
 										<!-- /.navbar-collapse -->
