@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Error!</title>
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Favicons -->
+    <link rel="shortcut icon"
+          th:href="@{/img/favicon.ico}"/>
+    <link rel="stylesheet"
+          th:href="@{/css/style_form.css}"/>
+</head>
+<body>
+<div class="container">
+    <div class="logo">
+        <a href="/"><img
+                th:src="@{/img/logo/heartify-logo.png}"
+                alt="Heartify logo" width="141" height="84"/></a>
+        <br/>
+        <br/>
+        <br/>
+        <h1 style="font-size: 28px;">Sorry! Error with viewing this
+            page!</h1>
+        <br/>
+        <br/>
+        <br/>
+        <img alt="fail"
+             th:src="@{/img/fail.png}"
+             width="150" height="150"/>
+    </div>
+    <div class="button-container">
+        <a href="home">
+            <button
+                    type="button" class="button">
+                <span>Home</span>
+            </button>
+        </a>
+    </div>
+    <br/>
+</div>
+</body>
+
+</html>
