@@ -1,6 +1,6 @@
-package com.heartfy.model;
+package com.heartify.model;
 
-import com.heartfy.model.pk.LocationPK;
+import com.heartify.model.pk.LocationPK;
 import lombok.Data;
 
 import javax.persistence.*;

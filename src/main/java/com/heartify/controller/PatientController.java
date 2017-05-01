@@ -1,4 +1,4 @@
-package com.heartfy.controller;
+package com.heartify.controller;
 
 public class PatientController {
 

@@ -1,4 +1,4 @@
-package com.heartfy.model.enumeration;
+package com.heartify.model.enumeration;
 
 public enum PrescriptionType {
     TREATMENT, OPERATION

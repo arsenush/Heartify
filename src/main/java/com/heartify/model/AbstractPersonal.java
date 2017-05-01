@@ -1,4 +1,4 @@
-package com.heartfy.model;
+package com.heartify.model;
 
 import lombok.Data;
 

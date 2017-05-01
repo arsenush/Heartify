@@ -1,4 +1,4 @@
-package com.heartfy.model.pk;
+package com.heartify.model.pk;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

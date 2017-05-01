@@ -1,4 +1,4 @@
-package com.heartfy.security;
+package com.heartify.security;
 
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -11,7 +11,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                    .antMatchers("/", "/css/**", "/img/**", "/js/**", "/vendor/**", "/error").permitAll()
+                    .antMatchers("/**", "/css/**", "/img/**", "/js/**", "/vendor/**", "/error").permitAll()
                     .antMatchers("/admin/**").hasRole("ADMIN")
                     .antMatchers("/doctor/**").hasRole("DOCTOR")
                     .antMatchers("/nurse/**").hasRole("NURSE")

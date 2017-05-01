@@ -1,4 +1,4 @@
-package com.heartfy.controller;
+package com.heartify.controller;
 
 /**
  * Created by Arsenush on 17.04.2017.

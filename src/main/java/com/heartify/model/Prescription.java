@@ -1,6 +1,6 @@
-package com.heartfy.model;
+package com.heartify.model;
 
-import com.heartfy.model.enumeration.PrescriptionType;
+import com.heartify.model.enumeration.PrescriptionType;
 import lombok.Data;
 
 import javax.persistence.*;
