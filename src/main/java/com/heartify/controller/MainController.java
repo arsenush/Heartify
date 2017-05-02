@@ -44,9 +44,9 @@ public class MainController {
         prescription.setDescription("klizma");
 
         List<Prescription> prescriptions = new ArrayList<>();
-//        prescriptions.add(prescription);
+        prescriptions.add(prescription);
 
-//        model.addAttribute("operations", prescriptions);
+        model.addAttribute("operations", prescriptions);
         model.addAttribute("user", new Doctor());
         return "doctor/index";
     }

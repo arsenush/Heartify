@@ -14,4 +14,12 @@ public class Location {
 	@ManyToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "patient_id", unique = true)
 	private Patient patient;
+
+	public Integer getWardNumber() {
+		return locationPK.getWardNumber();
+	}
+
+	public Integer getBedNumber() {
+		return locationPK.getBedNumber();
+	}
 }
