@@ -16,13 +16,15 @@
         <hr>
         <div class="row">
             <div id="container" class="container team-detail">
-                <div th:each="personal : ${allPersonal}" th:with="personalType=${#strings.toLowerCase(personal.class.simpleName)}">
+                <div th:each="personal : ${allPersonal}"
+                     th:with="personalType=${#strings.toLowerCase(personal.class.simpleName)}">
                     <div class="item col-md-6" th:classappend="${personalType}">
                         <div class="team-member">
                             <a data-toggle="modal" th:attr="data-target='#personalInfo' + ${personal.id}">
                                 <div class="team-img">
                                     <img th:src="${personal.avatar}"
-                                         class="img-responsive" th:alt="${personal.firstName} + ' ' + ${personal.surname}"/>
+                                         class="img-responsive"
+                                         th:alt="${personal.firstName} + ' ' + ${personal.surname}"/>
                                 </div>
                             </a>
                             <div class="member-details">
@@ -41,17 +43,23 @@
                                         <div class="col-xs-12">
                                             <div class="col-md-6 no-padding col-xs-2">
                                                 <img th:src="${personal.avatar}"
-                                                     class="img-responsive" th:alt="${personal.firstName} + ' ' + ${personal.surname}"/>
+                                                     class="img-responsive"
+                                                     th:alt="${personal.firstName} + ' ' + ${personal.surname}"/>
                                             </div>
                                             <div class="col-md-6 col-xs-10 team-pop-info">
                                                 <button data-dismiss="modal" class="m-close"></button>
                                                 <h4 th:text="${personal.firstName} + ' ' + ${personal.surname}"></h4>
                                                 <ul class="tp-meta">
-                                                    <li><span>Specialization</span> <em th:text="${personalType.equals('doctor') ? personal.specialization : 'Nurse'}"></em></li>
-                                                    <li><span>Phone Number</span> <em th:text="${personal.phone}"></em></li>
-                                                    <li><span>Address</span> <em th:text="${personal.address}"></em></li>
+                                                    <li><span>Specialization</span> <em
+                                                            th:text="${personalType.equals('doctor') ? personal.specialization : 'Nurse'}"></em>
+                                                    </li>
+                                                    <li><span>Phone Number</span> <em th:text="${personal.phone}"></em>
+                                                    </li>
+                                                    <li><span>Address</span> <em th:text="${personal.address}"></em>
+                                                    </li>
                                                     <form action="fire" method="post">
-                                                        <input name="personalId" type="hidden" th:value="${personal.id}"/>
+                                                        <input name="personalId" type="hidden"
+                                                               th:value="${personal.id}"/>
                                                         <div class="button-container">
                                                             <button type="submit" class="button green-butt">
                                                                 <span>Fire</span>

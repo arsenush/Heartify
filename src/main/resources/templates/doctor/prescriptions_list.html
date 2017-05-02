@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="/WEB-INF/tld/prescr.tld" prefix="my"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<section id="team" class="gray prescr">
+	<div class="container">
+		<div class="row">
+			<div
+				class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-md-offset-2">
+				<div class="team-filter-nav text-center">
+					<ul id="filters" class="filter-nav list-inline list-unstyled">
+						<li><a data-filter="*" class="current" href="#">All</a></li>
+						<li><a data-filter=".treatment" href="#">Treatment</a></li>
+						<li><a data-filter=".operation" href="#">Operation</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div id="container" class="container team-detail">
+				<c:forEach var="currentPr" items="${prescriptions}">
+					<my:pr prescription="${currentPr}" />
+				</c:forEach>
+			</div>
+		</div>
+		<hr>
+	</div>
+</section>

@@ -1,0 +1,41 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+
+<!-- Meta -->
+<meta charset="utf-8">
+<title>Doctor - My Operations</title>
+
+<jsp:include page="${request.getContextPath()}/common/styles.jsp"></jsp:include>
+
+</head>
+
+<body >
+	<jsp:include page="doctor_header.html"></jsp:include>
+	<!-- Insurance Section -->
+	<section id="insurance-types">
+		<div class="container">
+			<div class="row">
+				<div
+					class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+					<div class="insurance-stat text-center">
+						<h2>Here are your operations</h2>
+						<h5>Stay Clear</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<jsp:include page="operations_list.jsp"></jsp:include>
+	<jsp:include page="${request.getContextPath()}/common/footer.jsp"></jsp:include>
+	<jsp:include page="${request.getContextPath()}/common/scripts.jsp"></jsp:include>
+</body>
+
+</html>
