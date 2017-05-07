@@ -37,6 +37,7 @@ public class MainController {
         patient.setId(3);
         patient.setLocation(location);
         patient.setDiagnosis("Baniak");
+        patient.setAvatar("http://res.cloudinary.com/arsenush/image/upload/default.jpg");
 
         Prescription prescription = new Prescription();
         prescription.setAppointedDate(new Date());
@@ -48,6 +49,6 @@ public class MainController {
 
         model.addAttribute("operations", prescriptions);
         model.addAttribute("user", new Doctor());
-        return "doctor/index";
+        return "doctor/operations";
     }
 }
