@@ -1,0 +1,47 @@
+<!-- Sticky & Main Header -->
+<div class="main-header" xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:th="http://www.thymeleaf.org">
+    <div class="sticky-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-8 col-sm-4 col-md-4 col-lg-4 pull-left">
+                    <div class="main-logo">
+                        <a href="/"><img class="pull-left"
+                                         th:src="@{/img/logo/heart-icon.png}" alt="Heartify"/><span>HEARTIFY</span></a>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-sm-8 col-md-8 col-lg-8">
+                    <div class="main-navigation hidden-xs">
+                        <ul class="main-nav list-unstyled list-inline pull-right">
+                            <li class="active"><a href="home">Home</a></li>
+                            <li class="red"><a href="/logout">Log Out</a></li>
+                        </ul>
+                    </div>
+                    <!-- top navigation div -->
+                    <nav class="navbar navbar-default hidden-sm hidden-md hidden-lg"
+                         role="navigation">
+                        <div class="container-fluid">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle"
+                                        data-toggle="collapse" data-target="#navbar-collapse-1">
+                                    <span class="sr-only">Toggle navigation</span> <span
+                                        class="icon-bar"></span> <span class="icon-bar"></span> <span
+                                        class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="home">Home</a></li>
+                                    <li class="red"><a href="/logout">Log Out</a></li>
+                                </ul>
+                            </div>
+                            <!-- /.navbar-collapse -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

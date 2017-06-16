@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Log In</title>
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Favicons -->
+    <link rel="shortcut icon"
+          th:href="@{/img/favicon.ico}"/>
+    <link th:href="@{/css/style_form.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="container">
+    <div class="logo">
+        <a href="/"><img th:src="@{/img/logo/heartify-logo.png}" alt="Heartify logo"
+                         width="141" height="84"/></a>
+    </div>
+    <form action="/login" method="post">
+        <h1>Log In</h1>
+        <div class="form-group">
+            <input id="login" name="login" type="text" required="required" th:value="${userLogin}"/><label
+                for="login" class="control-label">Login</label><i class="bar"></i>
+        </div>
+        <div class="form-group">
+            <input id="password" name="password" type="password" required="required"/> <label
+                for="password" class="control-label">Password</label><i class="bar"></i>
+        </div>
+        <div class="form-radio">
+            <div class="radio">
+                <label> <input type="radio" name="user" value="doctor" required="required"/><i
+                        class="helper"></i>I'm a Doctor
+                </label>
+            </div>
+            <div class="radio">
+                <label> <input type="radio" name="user" value="nurse" required="required"/><i
+                        class="helper"></i>I'm a Nurse
+                </label>
+            </div>
+            <div class="radio">
+                <label> <input type="radio" name="user" value="patient" required="required"/><i
+                        class="helper"></i>I'm a Patient
+                </label>
+            </div>
+            <div class="radio">
+                <label> <input type="radio" name="user" value="admin" required="required"/><i
+                        class="helper"></i>I'm an Admin
+                </label>
+            </div>
+        </div>
+        <div class="button-container">
+            <button type="submit" class="button">
+                <span>Log In</span>
+            </button>
+            <div class="error">
+                <p th:text="${errorMsg}"></p>
+            </div>
+        </div>
+    </form>
+    <br/>
+</div>
+</body>
+</html>
